@@ -1,0 +1,25 @@
+$baseColor:rgb(127, 107, 131);
+
+.tel{
+    text-align: center;
+    width: 20vw;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    &::after{
+        content: "";
+        background-image: url(https://png.pngtree.com/png-clipart/20191027/ourmid/pngtree-telephone-glyph-icon-vector-png-image_5199512.png);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-size: cover;
+        left:25%;
+    }
+}
+.rimbo{
+    height: 40vw;
+    padding-top: 10vw;
+    .card{
+        height: 40%;    
+    }
+}

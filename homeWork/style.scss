@@ -1,0 +1,441 @@
+$baseColor:#aeffffd6;
+$baseColor2:#529ECC;
+$baseColor3:#000080;
+$baseColor4:#101D6B;
+$baseColor5:#008ECC;
+$baseColor6:#0E4D92;
+$baseColor7:#57A0D3;
+
+
+//以上顏色
+$basePx:50px;
+$baseWidth:100%;
+
+
+// 以上是引用元素
+
+@keyframes marquee{
+    0%{transform: translateX(-100%)};
+    100%{transform: translateX(100%);}
+    // 跑馬燈
+}
+//以上為動畫keyframe
+
+//全域作用
+*{
+    transition:.5s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+//BODY設定
+body{
+    margin: 0 auto;
+    position: static;
+    transition: .5s;
+    background-color: $baseColor2;
+}
+//跟Bootsrap一樣預設dflex的class
+.d-flex{
+    display: flex;
+}
+//狀態列
+.navBar{
+    background:linear-gradient(to top ,transparent , $baseColor2 );
+    width: $baseWidth;
+    min-height: $basePx;
+    height: 5vw;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    // LOGO圖
+    .icon{
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/54/Blue_Archive_logo.svg");
+        //外連維基的圖
+        background-repeat:no-repeat;
+        width: 5*$basePx;
+        height: 2*$basePx;
+        text-align: end;
+        margin-left: 15%;
+    }
+    // 導覽列
+    .slect{
+        justify-content: space-around;
+        width: 50%;
+        min-height: $basePx;
+        background: $baseColor4;
+        border-radius: $basePx 0 0 5px;
+        align-items: self-end;//往下排稍微突出一點點狀態列
+        // 導覽列內單位選項
+        .navList{
+            position: relative;
+            width: $baseWidth;
+            text-align: center;
+            align-items: center;
+            padding: 1% 0;
+            height: 50%;
+            transform: translateY(25%);//把狀態列的元素都往下25%
+            
+            //導覽列內按鈕
+            .downLoad{
+                cursor: pointer;
+                width: $baseWidth;
+                height: $baseWidth;
+                min-height: $basePx;
+                background:linear-gradient(to right bottom ,$baseColor3,$baseColor5) ;
+                color: #FFF;
+                font-size: large;
+                border: .5px solid $baseColor5;
+                border-radius: 20px;
+                &:hover{
+                    transform: rotate(-10deg) scale(1.1);
+                }
+            }
+            //導覽列內清單
+            #aboutUs{
+                
+                cursor: pointer;
+                text-align:start ;
+                border-radius:10px ;
+                font-size: larger;
+                box-sizing: border-box;
+                margin: 0 auto;
+                width: .8*$baseWidth;
+                min-width: .5*$basePx;
+                background-color: $baseColor4;
+                color: #FFF;
+                &:hover{
+                    color: $baseColor2;
+                    font-size: large;
+                }
+                li{
+                    &:nth-child(1){
+                        margin-top: 5%;
+                        //第一個li與ul貼太緊，單獨設立上方外距拉開
+                    }
+                    display: none;
+                    margin-bottom: 5px;
+                    font-size: larger;
+                    padding-bottom: 5%;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: medium;
+                        &:hover{
+                            color: $baseColor2;
+                            font-size: large;
+                            border-top:1px $baseColor2 dashed;
+                            border-bottom: 1px $baseColor2 dashed;
+                        }
+                    }
+                }
+                .OpenList{
+                    display: block;
+                    //配合toggle表示展開或沒展開成塊狀元素
+                }
+            }
+        }
+        .logIn{
+            width: $baseWidth;
+            min-width: $basePx;
+            border-radius:10px;
+            border-left:5px   solid $baseColor7;
+            border-bottom: 2.5px solid $baseColor7;
+            background-color: $baseColor4;
+            height: .6*$baseWidth;
+            //撐高才不會讓文字貼底部
+            &:hover{
+                transform: scale(1.3) translateY(-10%);
+                //放大 往上跑
+            }
+            img{
+                max-width: .2*$baseWidth;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
+                //a標籤的href會刷新，拔掉用pointer
+            }
+        }
+        //跟樓上老哥相同樣式
+        .signUp{
+            width: $baseWidth;
+            min-width: $basePx;
+            background-color: $baseColor4;
+            border-left:5px   solid $baseColor7;
+            border-bottom: 2.5px solid $baseColor7;
+            height: .6*$baseWidth;
+            border-radius: 10px;
+            &:hover{
+                transform: scale(1.3) translateY(-10%);
+                //放大 往上跑
+            }
+            img{
+                max-width: .2*$baseWidth;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
+                //a標籤的href會刷新，拔掉用pointer
+            }
+        }
+    }
+}
+
+// 中間大面積Layout
+
+.layOut{
+    background-color: $baseColor2;
+    padding: 5px 0;
+    position: relative;
+    &::before{
+        position: absolute;
+        z-index: 2;
+        content: "";
+        width: $baseWidth;
+        height: 2*$basePx;
+        background:linear-gradient(to right bottom ,$baseColor2 49.5%,transparent 50.5%);
+        //50% 50%變化劇烈會產生鋸齒 49.5%~50.5% 保留1%去除鋸齒
+    }
+    &::after{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        z-index: 2;
+        content: "";
+        width: $baseWidth;
+        height: 2*$basePx;
+        background:linear-gradient(to left top ,$baseColor2 49.5%,transparent 50.5%);
+        //50% 50%變化劇烈會產生鋸齒 49.5%~50.5% 保留1%去除鋸齒
+    }
+    .videoBackGround{
+        position: relative;
+        width: $baseWidth;
+        background-color: red;
+        vertical-align: bottom;
+        // Video跟img標籤一樣換行會有空白
+        //用vertical-align: bottom;消除
+    }
+}
+// 畫廊and側邊欄位
+.mainVessal{
+    width: $baseWidth;
+    height: 40vw;
+    background-color: $baseColor2;
+    // 畫廊
+    .galary{
+        box-sizing: border-box;
+        width: .7*$baseWidth;
+        background-color: $baseColor2;
+        padding:10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap:2.5% 1.5%;
+        // 畫廊第一張圖
+        .picture1{
+            position: relative;
+            //父元素相對定位讓a標籤能定位
+            background-color: $baseColor6;
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+            border-radius: 5%;
+            z-index: 2;
+            //這邊設z-index是因為發現hover移動上去下來後會被after的遮片卡到
+            a{
+                position: absolute;
+                //根據父元素調整絕對定位
+                top:4%;
+                bottom: 1%;
+                img{
+                    max-width:$baseWidth;
+                    border-radius: 5%;
+                    //每張圖片統一設定
+                }
+            }
+            &:hover{
+                transform: scale(1.005) translate(0,-10%) rotate(-2deg);
+                // 複數變形只需要用空格隔開
+                
+                box-shadow: $baseColor4 5px 10px 20px;
+            }
+        }
+        // 其餘的圖片
+        .picture{
+            position: relative;
+            //根據父元素調整絕對定位
+            background-color: $baseColor2;
+            border-radius: 5%;
+            &:hover{
+                transform: scale(1.05) ;
+                box-shadow: $baseColor6 4px 4px 5px;
+            }
+            a{
+                position: absolute;
+                //根據父元素調整絕對定位
+                top:4%;
+                left:1%;
+                right:1%;
+                bottom: 1%;
+                img{
+                    max-width: $baseWidth;
+                    border-radius: 5%;
+                    //每張圖片統一設定
+                }
+            }
+        }
+    }
+    // 側邊選單
+    .sideMenu{
+        position: relative;
+        border-radius: 3*$basePx 0 0 $basePx;
+        width: .3*$baseWidth;
+        background-color: $baseColor6;
+        margin-bottom: 1%;
+        .cheatArona{
+            // 說話啊羅納
+            width: .8*$baseWidth;
+            height: .8*$baseWidth;
+            background-repeat:no-repeat ;
+            background-image: url(/cheatArona/static.png);
+            background-size:cover ;
+            background-position:50px 50px ;
+            position: absolute;
+            right:0;
+            bottom:0;
+            .anserAria{
+                position: absolute;
+                top:-5%;
+                left: -15%;
+                // ↑調整對話框對應位置
+                border-radius: $basePx;
+                height: .5*$baseWidth;
+                width: .6*$baseWidth;
+                min-width: $basePx;
+                min-height: 2*$basePx;
+                box-sizing: border-box;
+                background-color: #FFF;
+                padding: 15% 1%;
+                // 以下回應內部文字設定
+                text-align: start;
+                font-size: 13pt;
+                color: black;
+                &::after{
+                    // 偽元素拉出對話框
+                    content: "";
+                    position: absolute;
+                    top:.7*$baseWidth;
+                    left: 95%;
+                    border-left: 30px  solid #fff;
+                    border-right: 0px  solid transparent;
+                    border-top: 10px  solid transparent;
+                    border-bottom: 10px  solid transparent;
+                }
+            }
+            label{
+                color: #FFF;
+                margin-left:50%;
+            }
+            .sayToArona{
+                margin-left: 50%;
+                max-width: .2*$baseWidth;
+            }
+            .sayIt{
+                background-color: $baseColor4;
+                color: #FFF;
+            }
+        }
+    }
+}
+// 頁尾跑馬燈
+.marqueeFooter{
+    color:white;
+    width: $baseWidth;
+    min-height: 5vw;
+    background-color: $baseColor4;
+    overflow: hidden;
+    // 這行設定避免跑出去把版面撐大，超出版面的部分用隱藏
+    font-size: 24pt;
+    .marqueeDiv{
+        // 跑馬燈要設定在包P的這個，上一層會整個底色跑掉
+        justify-content: space-between;
+        animation: marquee 15s linear infinite;
+        // 5個P標籤的跑馬燈
+        &:hover{
+            animation-play-state:paused ;
+            // 滑鼠移入暫停動畫
+        }
+    }
+}
+
+// 藏起來的註冊登入表單
+.signInlogIn{
+    // visibility: hidden; 原本設定隱藏 但冒泡層漸變效果很差
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-100%) translateY(-300%);
+    // 預設藏在最上方看不到
+    width: 7*$basePx;
+    margin: 0 auto;
+    box-sizing: border-box;
+    //表單統一格式
+    form{
+        transform: translateY(.5*(-$baseWidth)) ;
+        // ↑調整位置
+        border: 1px solid black;
+        background-color: $baseColor2;
+        height: 5*$basePx;
+        border-radius: 15px;
+        text-align: center;
+        h1{
+            font-size: 2rem;
+            color: #0E4D92;
+            text-shadow: #101D6B 1px 1px 30px;
+        }
+        //label&input的父元素
+        .LandI{
+            margin: 0 auto;
+            text-align: left;
+            width: .5*$baseWidth;
+            input{
+                width:$baseWidth;
+                &::placeholder{
+                    color:$baseColor3;
+                }
+            }
+        }
+        //按鈕統一格式
+        .btn{
+            width: .2*$baseWidth;
+            background-color: #0E4D92;
+            color: #fff;
+            margin:5% 2%;
+        }
+    }
+}
+
+// 切換顯示
+//JS插入此class名可以把註冊表單呼叫到中央
+.signInShow{
+    // visibility:visible;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(0%);
+    width: 7*$basePx;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+//原理同上
+.logInShow{
+    // visibility:visible; 原本用隱形 後改用位移藏
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(0%);
+    width: 7*$basePx;
+    margin: 0 auto;
+    box-sizing: border-box;;
+}

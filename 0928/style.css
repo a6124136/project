@@ -1,0 +1,11 @@
+* {
+  margin: 20px auto;
+}
+
+#reply {
+  align-items: center;
+  text-align: center;
+  width: 600px;
+  height: 600px;
+  background-color: aqua;
+}/*# sourceMappingURL=style.css.map */

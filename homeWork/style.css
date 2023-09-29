@@ -1,0 +1,374 @@
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+* {
+  transition: 0.5s ease-in-out;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  position: static;
+  transition: 0.5s;
+  background-color: #529ECC;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.navBar {
+  background: linear-gradient(to top, transparent, #529ECC);
+  width: 100%;
+  min-height: 50px;
+  height: 5vw;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+.navBar .icon {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/54/Blue_Archive_logo.svg");
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 100px;
+  text-align: end;
+  margin-left: 15%;
+}
+.navBar .slect {
+  justify-content: space-around;
+  width: 50%;
+  min-height: 50px;
+  background: #101D6B;
+  border-radius: 50px 0 0 5px;
+  align-items: self-end;
+}
+.navBar .slect .navList {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 1% 0;
+  height: 50%;
+  transform: translateY(25%);
+}
+.navBar .slect .navList .downLoad {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+  background: linear-gradient(to right bottom, #000080, #008ECC);
+  color: #FFF;
+  font-size: large;
+  border: 0.5px solid #008ECC;
+  border-radius: 20px;
+}
+.navBar .slect .navList .downLoad:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+.navBar .slect .navList #aboutUs {
+  cursor: pointer;
+  text-align: start;
+  border-radius: 10px;
+  font-size: larger;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 80%;
+  min-width: 25px;
+  background-color: #101D6B;
+  color: #FFF;
+}
+.navBar .slect .navList #aboutUs:hover {
+  color: #529ECC;
+  font-size: large;
+}
+.navBar .slect .navList #aboutUs li {
+  display: none;
+  margin-bottom: 5px;
+  font-size: larger;
+  padding-bottom: 5%;
+}
+.navBar .slect .navList #aboutUs li:nth-child(1) {
+  margin-top: 5%;
+}
+.navBar .slect .navList #aboutUs li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+}
+.navBar .slect .navList #aboutUs li a:hover {
+  color: #529ECC;
+  font-size: large;
+  border-top: 1px #529ECC dashed;
+  border-bottom: 1px #529ECC dashed;
+}
+.navBar .slect .navList #aboutUs .OpenList {
+  display: block;
+}
+.navBar .slect .logIn {
+  width: 100%;
+  min-width: 50px;
+  border-radius: 10px;
+  border-left: 5px solid #57A0D3;
+  border-bottom: 2.5px solid #57A0D3;
+  background-color: #101D6B;
+  height: 60%;
+}
+.navBar .slect .logIn:hover {
+  transform: scale(1.3) translateY(-10%);
+}
+.navBar .slect .logIn img {
+  max-width: 20%;
+}
+.navBar .slect .logIn a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.navBar .slect .signUp {
+  width: 100%;
+  min-width: 50px;
+  background-color: #101D6B;
+  border-left: 5px solid #57A0D3;
+  border-bottom: 2.5px solid #57A0D3;
+  height: 60%;
+  border-radius: 10px;
+}
+.navBar .slect .signUp:hover {
+  transform: scale(1.3) translateY(-10%);
+}
+.navBar .slect .signUp img {
+  max-width: 20%;
+}
+.navBar .slect .signUp a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.layOut {
+  background-color: #529ECC;
+  padding: 5px 0;
+  position: relative;
+}
+.layOut::before {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right bottom, #529ECC 49.5%, transparent 50.5%);
+}
+.layOut::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  content: "";
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to left top, #529ECC 49.5%, transparent 50.5%);
+}
+.layOut .videoBackGround {
+  position: relative;
+  width: 100%;
+  background-color: red;
+  vertical-align: bottom;
+}
+
+.mainVessal {
+  width: 100%;
+  height: 40vw;
+  background-color: #529ECC;
+}
+.mainVessal .galary {
+  box-sizing: border-box;
+  width: 70%;
+  background-color: #529ECC;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5% 1.5%;
+}
+.mainVessal .galary .picture1 {
+  position: relative;
+  background-color: #0E4D92;
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  border-radius: 5%;
+  z-index: 2;
+}
+.mainVessal .galary .picture1 a {
+  position: absolute;
+  top: 4%;
+  bottom: 1%;
+}
+.mainVessal .galary .picture1 a img {
+  max-width: 100%;
+  border-radius: 5%;
+}
+.mainVessal .galary .picture1:hover {
+  transform: scale(1.005) translate(0, -10%) rotate(-2deg);
+  box-shadow: #101D6B 5px 10px 20px;
+}
+.mainVessal .galary .picture {
+  position: relative;
+  background-color: #529ECC;
+  border-radius: 5%;
+}
+.mainVessal .galary .picture:hover {
+  transform: scale(1.05);
+  box-shadow: #0E4D92 4px 4px 5px;
+}
+.mainVessal .galary .picture a {
+  position: absolute;
+  top: 4%;
+  left: 1%;
+  right: 1%;
+  bottom: 1%;
+}
+.mainVessal .galary .picture a img {
+  max-width: 100%;
+  border-radius: 5%;
+}
+.mainVessal .sideMenu {
+  position: relative;
+  border-radius: 150px 0 0 50px;
+  width: 30%;
+  background-color: #0E4D92;
+  margin-bottom: 1%;
+}
+.mainVessal .sideMenu .cheatArona {
+  width: 80%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-image: url(/cheatArona/static.png);
+  background-size: cover;
+  background-position: 50px 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.mainVessal .sideMenu .cheatArona .anserAria {
+  position: absolute;
+  top: -5%;
+  left: -15%;
+  border-radius: 50px;
+  height: 50%;
+  width: 60%;
+  min-width: 50px;
+  min-height: 100px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  padding: 15% 1%;
+  text-align: start;
+  font-size: 13pt;
+  color: black;
+}
+.mainVessal .sideMenu .cheatArona .anserAria::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 95%;
+  border-left: 30px solid #fff;
+  border-right: 0px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.mainVessal .sideMenu .cheatArona label {
+  color: #FFF;
+  margin-left: 50%;
+}
+.mainVessal .sideMenu .cheatArona .sayToArona {
+  margin-left: 50%;
+  max-width: 20%;
+}
+.mainVessal .sideMenu .cheatArona .sayIt {
+  background-color: #101D6B;
+  color: #FFF;
+}
+
+.marqueeFooter {
+  color: white;
+  width: 100%;
+  min-height: 5vw;
+  background-color: #101D6B;
+  overflow: hidden;
+  font-size: 24pt;
+}
+.marqueeFooter .marqueeDiv {
+  justify-content: space-between;
+  animation: marquee 15s linear infinite;
+}
+.marqueeFooter .marqueeDiv:hover {
+  animation-play-state: paused;
+}
+
+.signInlogIn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-100%) translateY(-300%);
+  width: 350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.signInlogIn form {
+  transform: translateY(-50%);
+  border: 1px solid black;
+  background-color: #529ECC;
+  height: 250px;
+  border-radius: 15px;
+  text-align: center;
+}
+.signInlogIn form h1 {
+  font-size: 2rem;
+  color: #0E4D92;
+  text-shadow: #101D6B 1px 1px 30px;
+}
+.signInlogIn form .LandI {
+  margin: 0 auto;
+  text-align: left;
+  width: 50%;
+}
+.signInlogIn form .LandI input {
+  width: 100%;
+}
+.signInlogIn form .LandI input::-moz-placeholder {
+  color: #000080;
+}
+.signInlogIn form .LandI input::placeholder {
+  color: #000080;
+}
+.signInlogIn form .btn {
+  width: 20%;
+  background-color: #0E4D92;
+  color: #fff;
+  margin: 5% 2%;
+}
+
+.signInShow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  width: 350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.logInShow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  width: 350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */

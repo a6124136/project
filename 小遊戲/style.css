@@ -1,0 +1,12 @@
+.brickZone {
+  width: 200px;
+  height: 400px;
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+}
+.brickZone div {
+  width: 50px;
+  height: 20px;
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */

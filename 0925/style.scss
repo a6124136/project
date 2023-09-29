@@ -1,0 +1,89 @@
+@import "node_modules/bootstrap/scss/functions";
+
+@import "stylesheet/helper/variables";
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// Bootstrap提供的CSS
+
+@import "stylesheet/pages/home";
+
+// 自己的寫給分頁用
+
+// 第一容器
+#container{
+    width: 50%;
+    margin:10px auto;
+    border: cyan 1px solid;
+    .header{
+        width: 100%;
+        height: 10vw;
+    }
+    .middle{
+        padding: 5% 2%;
+        .item{
+            width: calc(70%/3);
+            height: 10vw;
+        }
+    }
+    .bottom{
+        width: 100%;
+        .left{
+            height: 20vw;
+            width: 100%;
+        }
+        .aside{
+            height: 20vw;
+            width: 100%;
+            padding:  10% 0 10% 10%;
+        }
+    }
+    .footer{
+        width: 100%;
+        height: 5vw;
+    }
+}
+// 第一個容器
+
+// 第二容器(與第一容器共用#container的設定，固不重複輸入)
+.top{
+    width: 100%;
+    height: 5vw;
+}
+.sec{
+    width: 100%;
+    height: 10vw;
+}
+.thrd{
+    width: 100%;
+    height: 40vw;
+    .leftPart{
+        width: 20%;
+    }
+    .nine{
+        width: 80%;
+        height: 40vw;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        .titleSpan{
+            height: 0;
+        }
+        .items{
+            box-sizing: border-box;
+            background-color:#00d9ff;
+            width: calc(81%/3);
+            margin: 12px ;
+            position: relative;
+            &::after{
+                content:"product name";
+                position: absolute;
+                bottom: -20px;
+                left: 10%;
+            }
+        }
+    }
+}
+.last{
+    width: 100%;
+    height: 7vw;
+}

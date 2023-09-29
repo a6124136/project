@@ -1,0 +1,461 @@
+@charset "UTF-8";
+* {
+  font-family: sans-serif;
+}
+
+.contrainer {
+  position: absolute;
+  top: 50px;
+  left: 40vw;
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+.contrainer div {
+  position: relative;
+  transition: 1s;
+  background-color: brown;
+  padding: 5px;
+  text-align: center;
+  padding-top: 45%;
+  font-size: 20px;
+  justify-content: center;
+}
+.contrainer div:hover {
+  transform: scale(1.1);
+}
+.contrainer div:hover::after {
+  content: "Hello";
+  font-size: larger;
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.login {
+  position: relative;
+  top: 20px;
+  left: 25vw;
+  width: 50vw;
+  height: 40vw;
+  background-size: cover;
+  background-image: url(https://static-cdn.nextapple.tw/prod/2023-05/665F35E47B70945350C1A37307BCCDAA/e4514d4382a1d4673fc878ae19b85f9b_1280.webp);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.login .form-floating {
+  font-size: 1rem;
+  width: 30%;
+}
+.login h1 {
+  color: blue;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.hmWork {
+  width: 500px;
+  height: 500px;
+  background-image: url(https://ithelp.ithome.com.tw/upload/images/20201002/20112550EaTLQXEeFS.png), url(https://d1dwq032kyr03c.cloudfront.net/upload/images/20201002/20112550Wl9lVJdeK4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain, cover;
+  border: 1px solid black;
+}
+
+#fixed {
+  transition: 1s;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 90%;
+  left: 80vw;
+  background-color: darkgreen;
+}
+#fixed::after {
+  content: "TOP";
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: absolute;
+  top: -20px;
+}
+#fixed:hover {
+  transform: scale(1.5);
+}
+
+#hmForm {
+  position: relative;
+  top: 20px;
+  left: 25vw;
+  width: 50vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border: 1px dashed blue;
+}
+.WandH {
+  width: 800px;
+}
+
+.header {
+  position: relative;
+  background-color: rgb(247, 255, 207);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding: 2%;
+  justify-content: space-between;
+}
+.header .leftTop {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 140, 140);
+}
+.header .humBerger {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+}
+.header .humBerger ul {
+  list-style: none;
+  padding-left: 0;
+}
+.header .humBerger a {
+  text-decoration: none;
+}
+.header .humBerger input {
+  display: none;
+}
+.header .humBerger input:checked ~ .menu {
+  max-height: 300px;
+}
+.header .humBerger img {
+  width: 100%;
+  vertical-align: middle;
+}
+.header .humBerger label {
+  float: right;
+  padding-right: 50px;
+  line-height: 50px;
+}
+.header .humBerger .menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  clear: both;
+  background: #fff;
+}
+.header .humBerger .menu li {
+  text-align: center;
+  border-bottom: 1px solid #efefef;
+}
+.header .humBerger .menu li a {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #5d5d5d;
+}
+.header .humBerger .menu li a:hover {
+  background: #5d5d5d;
+  color: #fff;
+}
+
+.middle {
+  position: relative;
+  background-color: rgb(247, 255, 207);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2%;
+  justify-content: space-between;
+}
+.middle .cover {
+  display: flex;
+}
+.middle .cover .article {
+  width: 250px;
+  height: 350px;
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+}
+.middle .cover .article h1 {
+  margin-top: 30%;
+  margin-left: 10%;
+  font-size: 3rem;
+}
+.middle .cover .article p {
+  text-wrap: wrap;
+}
+.middle .cover .picture {
+  width: 500px;
+  height: 400px;
+  background-image: url(/甜點圖片/1.png);
+  background-size: cover;
+}
+
+.seccond {
+  position: relative;
+  background-color: rgb(247, 255, 207);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2%;
+}
+.seccond h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.seccond .threeItem {
+  display: flex;
+  justify-content: space-around;
+}
+.seccond .threeItem .item1 {
+  background-image: url(/甜點圖片/3.png);
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+.seccond .threeItem .item1::before {
+  content: "item";
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgb(255, 140, 140);
+  width: 150px;
+  height: 45px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seccond .threeItem .item2 {
+  background-image: url(/甜點圖片/2.png);
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+.seccond .threeItem .item2::before {
+  content: "item";
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgb(255, 140, 140);
+  width: 150px;
+  height: 45px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seccond .threeItem .item3 {
+  background-image: url(/甜點圖片/4.png);
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+.seccond .threeItem .item3::before {
+  content: "item";
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 2rem;
+  background-color: rgb(255, 140, 140);
+  width: 150px;
+  height: 45px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seccond hr {
+  margin-top: 50px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.news {
+  position: relative;
+  background-color: rgb(247, 255, 207);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2%;
+}
+.news h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.news .newsItem {
+  display: flex;
+  justify-content: space-around;
+}
+.news .newsItem .newsA .itemA {
+  background-image: url(/甜點圖片/5.png);
+  background-size: cover;
+  position: relative;
+  width: 225px;
+  height: 225px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .newsItem .newsA .itemA::before {
+  content: "Detail";
+  color: #fff;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 1rem;
+  background-color: rgb(54, 54, 54);
+  width: 105px;
+  height: 25px;
+  position: absolute;
+  top: 180%;
+  left: 5%;
+}
+.news .newsItem .newsA p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 225px;
+  height: 225px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .newsItem .newsB .itemB {
+  background-image: url(/甜點圖片/6.png);
+  background-size: cover;
+  position: relative;
+  width: 225px;
+  height: 225px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .newsItem .newsB .itemB::before {
+  content: "Detail";
+  color: #fff;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 1rem;
+  background-color: rgb(54, 54, 54);
+  width: 105px;
+  height: 25px;
+  position: absolute;
+  top: 180%;
+  left: 5%;
+}
+.news .newsItem .newsB p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 225px;
+  height: 225px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .newsItem .newsC .itemC {
+  background-image: url(/甜點圖片/7.png);
+  background-size: cover;
+  position: relative;
+  width: 225px;
+  height: 225px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .newsItem .newsC .itemC::before {
+  content: "Detail";
+  color: #fff;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 1rem;
+  background-color: rgb(54, 54, 54);
+  width: 105px;
+  height: 25px;
+  position: absolute;
+  top: 180%;
+  left: 5%;
+}
+.news .newsItem .newsC p {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 225px;
+  height: 225px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+.news .more {
+  margin: 0 auto;
+  height: 35px;
+  padding-top: 10px;
+  width: 150px;
+  background-color: rgb(255, 140, 140);
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.496);
+}
+
+.newArrive {
+  position: relative;
+  background-color: rgb(247, 255, 207);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 450px;
+  padding-right: 4%;
+}
+.newArrive .newArrivePack {
+  display: flex;
+}
+.newArrive .newArrivePack .leftDiv {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  background-color: rgb(255, 140, 140);
+}
+.newArrive .newArrivePack .leftDiv::after {
+  content: "";
+  position: absolute;
+  background-image: url(/甜點圖片/8.png);
+  background-size: cover;
+  width: 350px;
+  height: 250px;
+  top: 50px;
+  left: 150px;
+}
+.newArrive .newArrivePack .rightDiv {
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-left: 150px;
+  margin-top: 50px;
+  width: 225px;
+  height: 250px;
+  background-color: rgb(255, 196, 196);
+}
+.newArrive .newArrivePack .rightDiv h1 {
+  text-align: center;
+}
+.newArrive .newArrivePack .rightDiv p {
+  overflow-wrap: break-word;
+  margin-left: 10px;
+}
+
+.footer {
+  position: relative;
+  background-color: rgb(255, 140, 140);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 15px;
+  padding: 2%;
+}/*# sourceMappingURL=style.css.map */

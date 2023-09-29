@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="getScore">
+        
+    </div>
+    <div class="mcDown">
+        假設麥當勞打工每周領一次薪水，工作基本時薪150元，其他規則如下
+        <ul>
+            <li>小於40H 0.8倍
+            </li>
+            <li>
+                等於40H 基本時薪
+            </li>
+            <li>
+                大於40H 1.2倍
+            </li>
+            <li>
+                大於50H 1.6倍
+            </li>
+        </ul>
+        <input type="number" name="" id="workHours" oninput="salary2(this.value)">
+        <span>輸入工時算算看你賺多少</span>
+        <p id="howMuch">
+
+        </p>
+    </div>
+    <script src="app.js"defer></script>
+</body>
+</html>

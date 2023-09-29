@@ -1,0 +1,56 @@
+div{
+    padding: 20px;
+    background-color: aqua;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 10px solid red;
+    text-align: center;
+    line-height: 2;
+};
+.vessal{
+    margin: 0 50px;
+}
+.vessal1{
+    margin: 0 100px;
+}
+.vessal2{
+    margin: 0 150px;
+}
+.vessal3{
+    margin: 0 200px;
+}
+.picture1{
+    width: 200px;
+    height: 200px;
+    margin: 0 18px 12px;
+}
+.picture2{
+    width: 300px;
+    height: 200px;
+    margin: 12px 18px 0;
+}
+.homeWorkDiv{
+    padding: 0;
+    margin: 18px 12px;
+    background-color:violet ;
+    height: 100px;
+    width: 524px;
+    border-radius: 0;
+    border: 0;
+}
+.homeWorkInput{
+    margin: 18px 6px;
+    height: 20px;
+    width: 386px;
+}
+.homeWorkButton{
+    margin: 18px 6px;
+    width: 120px;
+    height: 20px;
+}
+#test{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}

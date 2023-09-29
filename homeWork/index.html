@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zhan-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offcailWebsite</title>
+    <link href="/node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
+    <!-- 畫廊燈箱的樣式↑ -->
+    <link rel="stylesheet" href="style.css">
+        <!-- 自己的樣式 -->
+    <script src="main.js"defer>
+        //連接自己寫的JS
+    </script>
+    
+
+</head>
+<body>
+    <!-- 狀態列 -->
+    <nav class="navBar d-flex">
+        <div class="icon">
+            <!-- LOGO -->
+        </div>
+        <div class="slect d-flex">
+            <div class="navList">
+                <!-- 下載按鈕 -->
+                <a href="https://www.youtube.com/shorts/gQLhsDhYNLA" name="原神啟動囉">
+                <input type="button"  value="下載啟動器" class="downLoad">
+                </a>
+            </div>
+            <div class="navList">
+                <ul id="aboutUs">
+                    <!-- 展開/隱藏清單 -->
+                    關於我們
+                    <li><a href="https://tw.nexon.com/main/zh">代理商</a></li>
+                    <li><a href="https://tw.nexon.com/main/zh">開發商</a></li>
+                    <li><a href="https://kivotos.ltd/">民間資料站</a></li>
+                </ul>
+            </div>
+            <div class="navList logIn">
+                <a id="logAccount">
+                    <!-- ↑JS抓ID事件監聽呼叫表單 -->
+                    <img src="navicon/schale.png"  alt="">登入
+                </a>
+            </div>
+            <div class="navList signUp">
+                <a id="signAccount">
+                    <!-- ↑JS抓ID事件監聽呼叫表單 -->
+                    <img src="navicon/schale.png" alt="" >註冊
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- 大面積撥放影片 -->
+    <div class="layOut">
+        <video src="PV4.mp4" muted loop autoplay  class="videoBackGround" type="video/mp4"></video>
+    </div>
+    <!-- 畫廊與側欄 -->
+    <div class="mainVessal d-flex">
+        <!-- 畫廊 -->
+        <article class="galary">
+            <div class="picture1"  >
+                <a href="pictures/cg1.png" data-lightbox="image-1">
+                    <img src="pictures/cg1.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg2.png" data-lightbox="image-1">
+                    <img src="pictures/cg2.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg3.png" data-lightbox="image-1">
+                    <img src="pictures/cg3.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg4.png" data-lightbox="image-1">
+                    <img src="pictures/cg4.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg5.png" data-lightbox="image-1">
+                    <img src="pictures/cg5.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg6.png" data-lightbox="image-1">
+                    <img src="pictures/cg6.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg7.png" data-lightbox="image-1">
+                    <img src="pictures/cg7.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg8.png" data-lightbox="image-1">
+                    <img src="pictures/cg8.png" alt="">
+                </a>
+            </div>
+            <div class="picture">
+                <a href="pictures/cg9.png" data-lightbox="image-1">
+                    <img src="pictures/cg9.png" alt="">
+                </a>
+            </div>
+            
+            
+        
+        </article>
+<!-- 側欄-->
+        <aside class="sideMenu">
+            <div class="cheatArona" id="Arona">
+                <!-- 阿羅娜人物立繪 -->
+
+                <!-- 回話區域 -->
+                <div class="anserAria" id="replyAria">
+                    來問點問題吧!<br>關於蔚藍檔案、註冊登入、CG畫廊都可以喔!但不要問奇怪的問題!
+                </div>
+                <!-- 回話區域 -->
+                <label>問問アロナ</label>
+                <input type="text" class="sayToArona" name="sayToArona" id="talkQues">
+                <input type="button" value="說" class="sayIt" id="sentQues">
+            </div>
+        </aside>
+    </div>
+    <!-- 頁尾跑馬燈 -->
+    <div class="marqueeFooter">
+        <div class="marqueeDiv d-flex"> 
+            <p>克羅諾斯新聞網</p>
+            <p>Nexon樂線股份有限公司</p>
+            <p>Gehenna溫泉開發集團</p>
+            <p>D.U.區天氣預報</p>
+        </div>
+    </div>
+
+
+    <!-- 註冊跟登入的表單，隱藏在最上方平時不會出現 -->
+    <!-- 註冊表單 -->
+    <div class="signInlogIn">
+        <form action="" id="signIn">
+            <h1>
+                註冊帳號
+            </h1>
+            <div class="LandI">
+                <label for="" >註冊帳號
+                </label>
+                <input type="text"  id="name" autocomplete="username" placeholder="輸入帳號">
+            </div>
+            <div class="LandI" >
+                <label for="">密碼
+                </label>
+                <input type="password" maxlength="8" id="pwd" autocomplete="current-password" placeholder="輸入密碼">
+            </div>
+            <input type="button" class="btn"  value="註冊" onclick="reg()">
+            <input type="button" class="btn"  value="跳出" onclick="exitSign()">
+        </form>
+        
+        
+    </div>
+<!-- 登入表單 -->
+    <div class="signInlogIn">
+        <form action="" id="logIn">
+            <h1>
+                登入帳號
+            </h1>
+            <div class="LandI">
+                <label for="">帳號
+                </label>
+                <input type="text" autocomplete="username" placeholder="登入帳號" id="logName">
+            </div>
+            <div class="LandI">
+                <label for="">密碼
+                </label>
+                <input type="password"  autocomplete="current-password" placeholder="登入密碼" id="logPwd">
+                
+            </div>
+                <input type="button" class="btn"  value="跳出" onclick="exitLog()">
+                <input type="button" class="btn"  value="登入" onclick="log()">
+        </form>
+    </div>
+
+    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js">
+        //(light box)畫廊燈箱的外掛
+    </script>
+</body>
+</html>
+<!-- navBar玩跑馬燈 aside跳註冊登入 -->

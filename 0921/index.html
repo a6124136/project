@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+</head>
+<body>
+
+    <form action="">
+        <h1>
+            login page
+        </h1>
+        <div class="LandI">
+            <label for="">name
+            </label>
+            <input type="text" placeholder="&#9875;email&#9875;" id="logName">
+        </div>
+        <div class="LandI mb-3">
+            <label for="">password
+            </label>
+            <input type="password"  placeholder="&spadesuit;password&spadesuit;" id="logPwd">
+            
+        </div>
+        <div class="CheckAndSign mb-5">
+            <input type="checkbox" name="" id="">
+            <span class="mt-2">
+                keeplogin
+            </span>
+            <input type="button" class="btn-lg btn-secondary"  value="sign up" onclick="window.location.href='login.html'">
+        </div>
+        <input type="button" class="btn btn-secondary"  value="Log in" onclick="log()">
+    </form>
+    <script>
+        //登入
+    function log(){
+            let logUn = document.getElementById('logName').value;
+            let logPw = document.getElementById('logPwd').value;
+            if(logUn===""||logPw===""){
+                alert('請輸入用戶或密碼')
+            }else{
+                if (logUn in localStorage){
+                    let logPw = localStorage[logUn];
+                    if(logPw===passWord){
+                        alert('登入')
+                        document.getElementById('logName').value="";
+                        document.getElementById('logPwd').value="";
+                    }
+                    else{
+                        alert('密碼錯');
+                    }
+                }
+                else{
+                    alert('無此用戶'); 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

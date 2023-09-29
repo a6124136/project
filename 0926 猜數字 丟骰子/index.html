@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="intro.js" defer> </script>
+</head>
+<body>
+    <div id="box">
+        <div id="dogHere"></div>
+        <button type="button" id="dice">按我丟骰子</button>
+        <span>丟超過4點就贏啦:</span>
+        <p id="diceNum"></p>
+        <h1>輸入一個1~100的數值猜數字</h1>
+        <label for="anwserAria">
+            <input type="number"  id="youGuest">
+            <!-- oniput限制最大最小值輸入，即使手動輸入超過範圍也會被改為極限值 -->
+        </label>
+        <span>輸入完數字在網頁上按Enter就能猜數字了</span>
+        <p id="anwserAria"></p>
+    </div>
+</body>
+</html>

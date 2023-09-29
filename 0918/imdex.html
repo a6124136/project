@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <!-- 網頁語系 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+<!-- 
+<ol>
+    <li>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <p>這是P</p>
+        <p>這是P</p>
+    </li>
+    <li>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <p>這是P</p>
+        <p>這是P</p>
+    </li><li>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <h1>這是H1</h1>
+        <p>這是P</p>
+        <p>這是P</p>
+    </li>
+</ol> -->
+<!-- 註解 -->
+<!-- <ul>
+    <li>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+    </li>
+    <li>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+    </li>
+    <li>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+        <h6>這是H6</h6>
+    </li>
+</ul> -->
+<img id="duck" src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/0783062d0d860b8ae7d8e859241a700359c4d981.png" alt="">
+<button type="button" onclick="changePhoto()">按我進化</button>
+<!-- 
+<div class="love">
+    <div class="peace">
+        <div class="freedom">
+            <div class="safe">
+                <div class="life">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="t1">
+    <div class="t2"></div>
+    <div class="t2"></div>
+    <div class="t2"></div>
+    <div class="t3">
+        <P></P>
+    </div>
+    <div class="t5"></div>
+</div>
+<div class="t1"></div>
+<div class="t2"></div>
+<div class="t4">
+    <h></h>
+</div>
+<div class="t6"></div> -->
+<div class="vessal">
+    1
+</div>
+<div class="vessal1">
+    2
+</div>
+<div class="vessal2">
+    3
+</div>
+<div class="vessal3">
+    4
+</div>
+<hr>
+
+
+<img class="picture1" src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/0dd5b6e921f55c5d49978b84ee66e458336518ae.png" alt="">
+<img class="picture2" src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/0783062d0d860b8ae7d8e859241a700359c4d981.png" alt="">
+<div class="homeWorkDiv"></div>
+<input class="homWorkInput" type="text" style="width: 386px;margin: 18px 6px;
+height: 20px;">
+<button class="homeWorkButton" type="button" onclick="evo()">按我進化可達鴨，順便收服哥達鴨</button>
+
+
+<script>
+    
+    function changePhoto(){
+        var photo = document.getElementById('duck');
+        var godaduck="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/0dd5b6e921f55c5d49978b84ee66e458336518ae.png";
+        photo.setAttribute("src",godaduck);
+    //更改SRC屬性成功
+    };
+
+    function evo(){
+        var pic1 = document.getElementsByClassName('picture1')[0],
+        pic2 = document.getElementsByClassName('picture2')[0],
+        evoduck="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/0dd5b6e921f55c5d49978b84ee66e458336518ae.png",
+        fail="https://cdn2.ettoday.net/images/5311/5311576.jpg";
+        console.log(pic1);
+        pic1.setAttribute("src",fail);
+        pic2.setAttribute("src",evoduck);
+    };
+</script>
+
+<!-- <header>
+
+</header>
+<nav>
+
+</nav>
+<article>
+    <section>
+
+    </section>
+</article>
+<aside>
+
+</aside>
+<footer>
+
+</footer> -->
+
+</body>
+</html>

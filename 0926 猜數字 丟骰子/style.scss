@@ -1,0 +1,33 @@
+@import "node_modules/bootstrap/scss/functions";//這個必需最先導入，不然後面的Variable會失效(部分內容連結在function裡面)
+@import "stylesheet/helpers/variables";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "stylesheet/pages/home";
+.bigsize{
+    font-size: 24pt;
+}
+body{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    #box{
+        background-color: cyan;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        #dice{
+            width: 40%;
+        }
+        input::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+        }//去除input內外的上下選數字的輸入箭頭
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+        }
+    }
+    p{
+        font-size: 24pt;
+    }
+}

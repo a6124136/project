@@ -1,0 +1,64 @@
+* {
+  margin: 0 auto;
+  font: 1em sans-serif;
+}
+
+form{
+  padding-top: 10%;
+  margin-top: 1vw;
+  background-color: rgb(173, 173, 173);
+  width: 750px;
+  height: 625px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px black, -5px -5px 20px black, -5px 5px 20px black, 5px -5px 20px black;
+  text-align: center;
+}
+form h1 {
+  font-size: 25px;
+}
+form .LandI {
+  text-align: left;
+  width: 250px;
+}
+form .LandI input {
+  width: 250px;
+}
+form .LandI input::-moz-placeholder {
+  color: rgb(197, 168, 255);
+}
+form .LandI input::placeholder {
+  color: rgb(197, 168, 255);
+}
+form .CheckAndSign {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  text-align: end;
+}
+form .CheckAndSign span {
+  text-align: center;
+  font-size: larger;
+  left: -50px;
+}
+form .CheckAndSign .checkbox {
+  width: 25px;
+  height: 25px;
+}
+form .CheckAndSign .btn {
+  width: 175px;
+  height: 37.5px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+form .CheckAndSign .btn:hover {
+  transform: scale(1.2);
+  color: black;
+  background-color: #fff;
+}
+form .CheckAndSign .CheckAndSign {
+  display: flex;
+  justify-content: space-around;
+}
+form .btn {
+  width: 150px;
+}/*# sourceMappingURL=login.css.map */

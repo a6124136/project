@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+}
+body .top {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+body .top .topText {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: move 4s infinite ease-in-out;
+}
+body .top .topText:hover {
+  animation-play-state: paused;
+}
+body .top:active {
+  background-color: yellow;
+}
+body .twoColorBox {
+  width: 50vw;
+  height: 200px;
+  border: 5px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body .twoColorBox .blueBox {
+  width: 10VW;
+  height: 100px;
+  background-color: blue;
+}
+body .twoColorBox .redBox {
+  width: 10VW;
+  height: 100px;
+  background-color: red;
+}
+@keyframes move {
+  50% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+body .pratice {
+  background-color: #11aad8;
+}
+body .page {
+  width: 70vw;
+  display: flex;
+}
+body .first {
+  height: 20vw;
+}
+body .seccond {
+  height: 20vw;
+  justify-content: space-around;
+  align-items: center;
+}
+body .seccond section {
+  width: 15vw;
+  height: 15vw;
+}
+body .third aside {
+  width: 50vw;
+  height: 40vw;
+}
+body .third article {
+  width: 50vw;
+  height: 40vw;
+}
+body .third article h1 {
+  margin-top: 40%;
+}
+body .third article p {
+  margin-bottom: 40%;
+}
+body .bottom {
+  height: 5vw;
+  margin-top: 5%;
+}
+
+.pratice2 {
+  background-color: #00bfd1;
+}
+
+.frame4-1 {
+  height: 5vw;
+}
+
+.frame4-2 {
+  height: 10vw;
+  background-color: #00eaff;
+}
+
+.frame4-3 {
+  height: 40vw;
+  margin: 1% 0;
+}
+.frame4-3 aside {
+  width: 20%;
+}
+.frame4-3 article {
+  width: 80%;
+  justify-content: center;
+}
+.frame4-3 article .title {
+  display: flex;
+  height: 5%;
+  text-align: center;
+}
+.frame4-3 article .title h1 {
+  margin-right: 20%;
+  margin-left: 12%;
+}
+.frame4-3 article .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2% 7%;
+  height: 27%;
+}
+.frame4-3 article .row .item {
+  width: 25%;
+  height: 90%;
+}
+.frame4-3 article .row .item .inner {
+  height: 100%;
+  width: 100%;
+  background-color: #01e0fe;
+}
+.frame4-3 article .row .item p {
+  margin: 0;
+  font-size: smaller;
+  text-align: center;
+}
+
+.frame4-4 {
+  height: 5vw;
+}/*# sourceMappingURL=style.css.map */

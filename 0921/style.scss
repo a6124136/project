@@ -1,0 +1,50 @@
+$baseWidth:25px;
+
+*{ 
+    margin: 0 auto;
+    font: 1em sans-serif;
+}
+form{
+    padding-top: 10%;
+    margin-top: 1vw;
+    background-color: rgb(173, 173, 173);
+    width: 30*$baseWidth;
+    height: 25*$baseWidth;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px black,-5px -5px 20px black,-5px 5px 20px black,5px -5px 20px black;
+    text-align: center;
+    .LandI{
+        text-align: left;
+        width: 10*$baseWidth;
+        input{
+            width: 10*$baseWidth;
+        }
+    }
+    .CheckAndSign{
+        width: 10*$baseWidth;
+        display: flex;
+        justify-content: center;
+        text-align: end;
+        span{
+            text-align: center;
+            font-size: larger;
+            left: -50px;
+        }
+        .checkbox{
+            margin-right: 0;
+        }
+        .btn{
+            width: 7*$baseWidth;
+            height: 1.5*$baseWidth;
+            margin-left:50% ;
+            transform: translateX(-50%);
+        }
+        .CheckAndSign{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .btn{
+        width: 6*$baseWidth;
+    }
+}

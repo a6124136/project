@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+</head>
+<body>
+
+    <form action="">
+        <h1>
+            SignUp Page
+        </h1>
+        <div class="LandI">
+            <label for="">E-mail
+            </label>
+            <input type="email" placeholder="&#9742;輸入信箱">
+        </div>
+        <div class="LandI mb-3" id="">
+            <label for="useName" >Name
+            </label>
+            <input type="text"  id="name" placeholder="&#9773;輸入姓名">
+        </div>
+        <div class="LandI mb-3" id="">
+            <label for="passWord">Password
+            </label>
+            <input type="password" maxlength="8" id="pwd" placeholder="&#9785;******">
+        </div>
+        <div class="LandI mb-3">
+            <label for="">Repeat Password
+            </label>
+            <input type="password" id="" placeholder="&#9822;******">
+        </div>
+        <input type="button" class="btn btn-secondary"  value="Sign Up" onclick="reg()">
+        <input type="button" class="btn btn-secondary"  value="回上一頁" onclick="history.back()">
+    </form>
+    
+    
+    <form action="" style="margin-top:50px ;">
+        <h1>
+            login page
+        </h1>
+        <div class="LandI">
+            <label for="">name
+            </label>
+            <input type="text" placeholder="&#9875;name&#9875;" id="logName">
+        </div>
+        <div class="LandI mb-3">
+            <label for="">password
+            </label>
+            <input type="password"  placeholder="&spades;password&spades;" id="logPwd">
+            
+        </div>
+        <div class="CheckAndSign mb-5">
+            <input type="checkbox" name="" id="">
+            <span class="mt-2">
+                keeplogin
+            </span>
+            <input type="button" class="btn-lg btn-secondary"  value="sign up" onclick="window.location.href='login.html'">
+        </div>
+        <input type="button" class="btn btn-secondary"  value="Log in" onclick="log()">
+    </form>
+</body>
+
+<script>
+    //註冊本地
+    function reg(){
+        let userName =document.getElementById('name').value,
+            passWord=document.getElementById('pwd').value;
+            //以id鎖定input將DOM物件傳入值存為變數
+            if(userName===""|| pwd===""){
+                alert("沒輸入帳號或密碼")
+                //if判別式，若值為空跳出警告沒輸入帳密
+            }else{
+                if((userName&&passWord)in localStorage){
+                    //localStorage裡若有相同帳號&&(和)密碼就跳出警告
+                    //然後將input內輸入的值清空
+                    alert("用戶或密碼重複，請重來");
+                    document.getElementById('name').value="";
+                    document.getElementById('pwd').value="";
+                }
+                else{
+                    localStorage.setItem(userName,passWord);
+                    alert('註冊成功')
+                    //排除上述條件後彈出註冊成功
+                    //並且用localStorage.setItem(key,value)語法
+                    //將帳號變數與密碼變數作為參數傳入
+                    //帳號與密碼形成鍵值對封存(每個帳號對應一個密碼)
+                }
+            }
+    }
+    
+    
+        //登入
+        function log(){
+            let logUn = document.getElementById('logName').value;
+            let logPw = document.getElementById('logPwd').value;
+            //一樣取得值(用戶輸入的帳號、密碼)存為變數
+            if(logUn===""||logPw===""){
+                alert('請輸入用戶或密碼')
+                //沒輸入帳號或密碼跳警告
+            }else{
+                if (logUn in localStorage){
+                    //↑ 如果輸入的logUn帳號(key)有在裡面
+                    //localstorage儲存為Key:Value 鍵值對 
+                    //↓ 設passWord=logUn對應的帳號(Value)
+                    let passWord=localStorage[logUn]
+                    if(logPw===passWord){
+                        //儲存帳號的密碼若與輸入密碼相符
+                        alert('登入成功')
+                        document.getElementById('logName').value="";
+                        document.getElementById('logPwd').value="";
+                    }
+                }
+                else{
+                    alert('登入失敗'); 
+                }
+            }
+        }
+</script>
+</html>
