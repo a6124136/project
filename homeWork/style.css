@@ -215,7 +215,6 @@ body {
 }
 .mainVessal .galary .picture1:hover {
   transform: scale(1.005) translate(0, -10%) rotate(-2deg);
-  box-shadow: #101D6B 5px 10px 20px;
 }
 .mainVessal .galary .picture {
   position: relative;

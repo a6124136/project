@@ -1,0 +1,14 @@
+
+  Vue中安裝Bootstrap流程
+
+  終端機輸入 npm install bootstrap @popperjs/core
+
+  assets資料夾建立stylesheet資料夾，從node_modules/bootstrap/scss中找到_variables.scss，複製到assets/stylesheet
+
+  assets檔案中的main.css改成main.scss
+
+  main.scss與之前一樣匯入function、_variables、bootstrap(語法@import '路徑')
+
+  main.js中import'./assets/main.css'這個改成scss檔
+
+  main.js中添加 import 'bootstrap'

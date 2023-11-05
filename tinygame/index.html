@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="gameZone.js" defer></script>
+    <script type="module" src="ground.js"></script>
+    <script type="module" src="updateCustomProperty.js"></script>
+    <script type="module" src="Dino.js"></script>
+</head>
+<body>
+    <div class="world" id="dataworld">
+        <!-- data-world給JS的querySelector選取 -->
+        <div class="score" data-score>
+            0
+        </div>
+        <div class="startScreen" data-start-screen>
+            Press any key to start
+        </div>
+        <img src="imgs/ground.png" alt="" class="ground" data-ground>
+        <img src="imgs/ground.png" alt="" class="ground" data-ground>
+        <img src="imgs/dino-stationary.png" alt="" class="dino" data-Dino>
+        
+    </div>
+</body>
+</html>

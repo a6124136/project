@@ -1,0 +1,6 @@
+直接找userUi.VUE
+跟底下兩個子路由toFatherChild.vue  以及  fromFather.vue
+包含了props跟emit的兩者相互運用
+toFatherChild傳給userUi，userUi再傳給fromFather
+打包成物件然後，屬性分別為帳號密碼等....
+最後再拆解給各個項目使用

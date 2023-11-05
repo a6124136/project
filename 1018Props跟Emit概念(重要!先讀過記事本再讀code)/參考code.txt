@@ -1,0 +1,93 @@
+父元件部分
+
+記得引入兩個子元件，不然不能使用components
+
+import emitchild from '../components/toFatherChild.vue'
+import propschild from '../components/fromFather.vue'
+
+  data(){
+            return{
+                page:true,//切換頁開關
+                // 這邊接收toFather這個子元件emit傳來的資料，然後再傳給fromFather這個子元件的props應用
+                father:{
+                    acc:'',
+                    pwd:'',
+                    mail:'',
+                    gender:'',
+                    age:0,
+                }
+            }
+        },
+        components:{
+            emitchild,
+            propschild
+        },
+        methods:{
+            changeState(arg){
+                this.father.acc=arg.acc
+                this.father.pwd=arg.pwd
+                this.father.mail=arg.mail
+                this.father.gender=arg.gender
+                this.father.age=arg.age
+
+                // console.log('123')確認收到了，@方法要寫在子組件的標籤上，不然不能作用
+            }
+        }
+
+---------------------------template-------------------------------------------------------
+
+    <!-- 原本用v-if v-else-if做切換，但切換會生成新的子元件導致輸入資料丟失，所以改用show -->
+    <emitchild v-show="page" @turnState="changeState">
+        <!-- 這邊是emit 子傳父 -->
+    </emitchild>
+    
+    <propschild v-show="!page" :fatherGift="father"> 
+        <!-- 這邊是props 父傳子 綁定的名字fatherGift是在子元件props內的命名  father是父元件要傳過去的資料 -->
+    </propschild>
+
+
+---------------------------template-------------------------------------------------------
+
+data存放接收與發送的資料欄位
+子元件命名使用
+方法取得emit傳送的任務跟值
+
+----------------------------------------------------------------------------------------------------
+
+emit子元件
+
+
+        methods:{
+            emitgo(){
+                //傳給父元件的值
+                // console.log('emit執行')
+                // this.$emit('turnAcc','123')測試過，觸發的@turnAcc要寫在父元件的子組件標籤上
+                // emit回傳給apple執行 參數是this.text(orange)
+                // $emit('要執行的動作' , 發送的參數 )
+            }
+        }   
+
+methods內可以寫好function執行emit 語法  this.$emit('在父元件的子元件標籤上命名要執行的功能',傳送參數)
+!!!!!!!!!!!!!注意!!!!!!!!!!!!  接收emit的命名要註冊再子元件標籤上，寫在老爸的標籤身上沒幹用
+
+----------------------------------------------------------------------------------------------------
+
+props子元件
+
+
+
+  // props從子組件接收父組件傳的資料
+    // 註冊名稱JOJO(陣列的寫法 也能用物件)
+    props:{
+        fatherGift:{
+            type:Object,
+            default:'沒接到老爸的禮物欸?'
+            // 爽阿 接到囉
+        }
+
+    }
+
+跟emit一樣
+父元件的子元件標籤內註冊要傳送的props命名，寫在老爸身上的標籤真的沒幹用
+寫完就能把裡面的值拿出來用了
+老規矩，如果是物件或陣列記得用物件.屬性  陣列[index]的方式來使用資料

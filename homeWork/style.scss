@@ -257,8 +257,6 @@ body{
             &:hover{
                 transform: scale(1.005) translate(0,-10%) rotate(-2deg);
                 // 複數變形只需要用空格隔開
-                
-                box-shadow: $baseColor4 5px 10px 20px;
             }
         }
         // 其餘的圖片
