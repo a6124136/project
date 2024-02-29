@@ -132,7 +132,7 @@ function reg(){
 
     
     function resetArona(){
-        theReply.innerHTML="來問點問題吧!<br>關於蔚藍檔案、註冊登入、CG畫廊都可以喔!但不要問奇怪的問題!";
+        theReply.innerHTML="用關鍵字來問點問題吧!<br>關於蔚藍檔案、<br>註冊登入、<br>CG畫廊都可以喔!";
         Arona.style.backgroundImage ="url(/cheatArona/static.png)";
     };
     //還原預設阿羅娜，要傳給Debounce當參數用
@@ -186,5 +186,8 @@ function reg(){
         else if ( SignLogTestIstrue != null && BATestIstrue === null && ThreesizeTestIstrue === null && AlbumTestIstrue === null ){
             theReply.innerHTML="點選右上角的註冊可以加入會員喔!雖然是假的.....";
             Arona.style.backgroundImage ="url(/cheatArona/sad.png)";
+        }else{
+            theReply.innerHTML="アロナ不懂你的意思?<br>再換個方式問問看吧";
+            Arona.style.backgroundImage ="url(/cheatArona/smile.png)";
         }
     };
