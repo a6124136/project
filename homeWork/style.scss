@@ -92,7 +92,7 @@ body{
         width: 50%;
         min-height: $basePx;
         background: $baseColor4;
-        border-radius: $basePx 0 0 5px;
+        transform: skewY(5deg);
         align-items: self-end;//往下排稍微突出一點點狀態列
         // 導覽列內單位選項
         .navList{
@@ -406,6 +406,9 @@ body{
 }
 // 頁尾跑馬燈
 .marqueeFooter{
+    @include mobile(){
+        display: none;
+    }
     color:white;
     width: $baseWidth;
     background-color: $baseColor4;
@@ -505,4 +508,29 @@ body{
     margin: 0 auto;
     box-sizing: border-box;;
 }
+//手機端顯示的立繪
+#mobileMsg{
+    display: none;
+    @include mobile(){
+        display: block;
+        width: 100vw;
+        position: absolute;
+        bottom:0;
+        img{
+            width: 50vw;
+            transform: translate(80%);
 
+        }
+        &::before{
+            content: "Mobile端暫定";
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            background-color: #fff;
+            width: 25vw;
+            height: 5vh;
+            text-align: center;
+            transform: skew(-20deg);
+        }
+    }
+}

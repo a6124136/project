@@ -1,7 +1,8 @@
-//jquery
-//jquery
+
 const Openlist = document.getElementById('aboutUs');
 Openlist.addEventListener('click',toggleList);
+
+
 
 var listItem = Openlist.getElementsByTagName('li');
 let isOpen = false;
@@ -191,3 +192,36 @@ function reg(){
             Arona.style.backgroundImage ="url(/cheatArona/smile.png)";
         }
     };
+
+var navBar= document.getElementsByClassName('navBar')[0]
+window.addEventListener('scroll',throttle(navOpenAndClose,50))
+function navOpenAndClose(){
+    if(window.scrollY>200){
+        navBar.style.display="none";
+    }else{
+        navBar.style.display="flex";
+    }
+    //可以關閉 但是切換到PAD或MOBILE會出現，另外用resize把他幹掉
+}
+window.addEventListener('resize',()=>{
+    if(window.innerWidth<1080){
+        navBar.style.display="none"
+    }else{
+        navBar.style.display="flex"
+    }
+})
+
+//節流函數
+function throttle(mainFunction, delay) {
+let timerFlag = null; // Variable to keep track of the timer
+
+// Returning a throttled version 
+return (...args) => {
+    if (timerFlag === null) { // If there is no timer currently running
+    mainFunction(...args); // Execute the main function 
+    timerFlag = setTimeout(() => { // Set a timer to clear the timerFlag after the specified delay
+        timerFlag = null; // Clear the timerFlag to allow the main function to be executed again
+    }, delay);
+    }
+};
+}

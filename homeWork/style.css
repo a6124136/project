@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -64,7 +65,7 @@ body {
   width: 50%;
   min-height: 50px;
   background: #101D6B;
-  border-radius: 50px 0 0 5px;
+  transform: skewY(5deg);
   align-items: self-end;
 }
 .navBar .slect .navList {
@@ -359,6 +360,11 @@ body {
   overflow: hidden;
   font-size: 14pt;
 }
+@media (max-width: 550px) {
+  .marqueeFooter {
+    display: none;
+  }
+}
 .marqueeFooter .marqueeDiv {
   justify-content: space-between;
 }
@@ -428,4 +434,31 @@ body {
   width: 350px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+#mobileMsg {
+  display: none;
+}
+@media (max-width: 550px) {
+  #mobileMsg {
+    display: block;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+  }
+  #mobileMsg img {
+    width: 50vw;
+    transform: translate(80%);
+  }
+  #mobileMsg::before {
+    content: "Mobile端暫定";
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background-color: #fff;
+    width: 25vw;
+    height: 5vh;
+    text-align: center;
+    transform: skew(-20deg);
+  }
 }/*# sourceMappingURL=style.css.map */
